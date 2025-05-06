@@ -10,7 +10,7 @@ private:
     vector<Products::Product*> arr; 
 public:
     Lottery(){
-        ifstream file("Shop.txt");
+        ifstream file("Shop2.txt");
         Products::Product* obj = nullptr;
         if (file.is_open()) {
         string type;
@@ -31,7 +31,7 @@ public:
         }
     };
     ~Lottery(){
-        ofstream file("Shop.txt");
+        ofstream file("Shop2.txt", ios::trunc);
         if(file.is_open()){
             for (auto item: arr){
                 item->saveToFile(file);
