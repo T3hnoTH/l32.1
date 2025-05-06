@@ -12,8 +12,18 @@ namespace Products{
         string manufacturer;
         int age;
     public:
-        Product(){};
-        Product(string uname,float uprice,string umanufacturer,int uage){};
+        Product(){
+            name = "undefined";
+            price = 0;
+            manufacturer = "undefined";
+            age = 0;
+        };
+        Product(string uname,float uprice,string umanufacturer,int uage){
+            name = uname;
+            price = uprice;
+            manufacturer = umanufacturer;
+            age = uage;
+        };
         virtual ~Product(){};
 
         void setName(string uname){name = uname;};
